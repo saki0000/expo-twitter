@@ -4,9 +4,8 @@ const twitterApi = {
   key: "aWNG9Ngbw4S2qw1iM9VTvhNZr",
   secret: "qfc5HA2bufW8aEu1QWProBKOJ2KseTcYFkprBUDq0AjEEfeef1",
 };
-
+const { RNTwitterSignIn } = NativeModules;
 export default function App() {
-  const { RNTwitterSignIn } = NativeModules;
   const loginTwitter = () => {
     RNTwitterSignIn.init(twitterApi.key, twitterApi.secret);
     RNTwitterSignIn.logIn();
